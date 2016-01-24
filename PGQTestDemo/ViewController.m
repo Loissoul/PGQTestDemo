@@ -7,8 +7,28 @@
 //
 
 #import "ViewController.h"
+#import "ViewAController.h"
+#import "CalayerCAViewController.h"
+#import "VCTransitionsController.h"
+
+#import "ImageViewController.h"
+#import "PGQViewController.h"
+
+#import "Main1ViewController.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
+
+#import "MainViewController.h"
+
+#import "showPGQContextMenuViewController.h"
+#import "QQUItableViewAlert.h"
+#import "CustomUIViewController.h"
+#import "TranVC.h"
+#import "SelectedPhotoViewController.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NSArray *dataArr;
 
 @end
 
@@ -16,7 +36,144 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    SXLog(@"heheda");
+    
+    [self.tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew  context:nil];
+    
+    _dataArr = @[@"Core Animation Demo(CA)",@"Core Graphic Demo(CG)",@"Thread Demo(CoreData and so on )",@"异步I/O(大文件读取)",@"Custom UI",@"ReactiveCocoa Demo",@"自定义VC转场动画",@"RunLoop应用(常驻线程)",@"消息转发机制",@"Method Swizzling ",@"传值",@"tableView动态计算cell的高度",@"将几张图片合成一张",@"各种APP的标题模仿",@"左视图",@"有趣的Autolayout示例-Masonry实现",@"右边按钮下拉",@"选择相册"];
+    
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    
+    NSLog(@"hehe");
+}
+- (void) viewWillAppear:(BOOL)animated
+{
+//    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:127 green:0 blue:127 alpha: 1];
+   self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:127 green:0 blue:127 alpha:1];
+
+//    self.navigationController.navigationBar.alpha = 0;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+}
+
+
+-(void)dealloc
+{
+    [self.tableView removeObserver:self forKeyPath:@"contentOffset" context:nil];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+
+-(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+{
+    if (object == self.tableView && [keyPath isEqualToString:@"contentOffset"])
+    {
+        CGFloat offsetY = self.tableView.contentOffset.y;
+        CGFloat delta = offsetY / 64.f ;
+//        delta = MAX(0, delta);
+        if (offsetY > 0) {
+//            self.navigationController.navigationBar.alpha = 0;
+//            CGFloat alpha = 1 - ((64 - offsetY) / 64);
+            CGFloat alpha = offsetY/64;
+//            self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:127 green:0 blue:127 alpha:alpha];
+            self.navigationController.navigationBar.alpha = alpha;
+        }
+        else{
+//            self.navigationController.navigationBar.alpha = MIN(1, delta);
+            self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:127 green:0 blue:127 alpha:0];
+            NSLog(@"%f",offsetY);
+        }
+    }
+    else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _dataArr.count;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *const cellID = @"cellID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    cell.textLabel.text = _dataArr[indexPath.row];
+    return cell;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSInteger row = indexPath.row;
+    
+    NSLog(@"%ld",row);
+    
+    if(row == 0){
+        CalayerCAViewController *calayer = [[CalayerCAViewController alloc] init];
+        [self .navigationController pushViewController:calayer animated:YES];
+    }
+    else if (row == 4){
+        CustomUIViewController * customUi = [[CustomUIViewController alloc] init];
+        
+        [self.navigationController pushViewController:customUi animated:YES];
+    }
+    else if (row == 6) {
+//        VCTransitionsController *vctransition = [[VCTransitionsController alloc] init];
+//        [self.navigationController pushViewController:vctransition animated:YES];
+//
+//        [self presentViewController:vctransition animated:YES completion:^{
+//            
+//            
+//        }];
+        
+        [self.navigationController pushViewController:[[TranVC alloc] init] animated:YES];
+    }
+    else if(row == 10){
+        ViewAController *vcA  =  [[ViewAController alloc] init];
+        [self.navigationController pushViewController:vcA animated:YES];
+    }
+    else if (row == 11) {
+        NSLog(@"动态计算cell的高度");
+        QQUItableViewAlert * qqTableViewAlert = [[QQUItableViewAlert alloc] init];
+        [self.navigationController pushViewController:qqTableViewAlert animated:YES];
+    }
+    else if (row == 12){
+        ImageViewController *imageView = [[ImageViewController alloc] init];
+        [self.navigationController pushViewController:imageView animated:YES];
+    }
+    else if (row == 13){
+        PGQViewController *pgqView = [[PGQViewController alloc] init];
+        [self.navigationController pushViewController:pgqView animated:YES];
+    }
+    else if (row == 14) {
+        Main1ViewController *mainVc = [[Main1ViewController alloc] initWithLeft:[[LeftViewController alloc]init] right:[[RightViewController alloc] init] ];
+        [self.navigationController pushViewController:mainVc animated:YES];
+    }
+    else if (row == 15){
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main1" bundle:nil];
+        MainViewController *autolayoutView = [storyBoard instantiateViewControllerWithIdentifier:@"MainViewAuto"];
+        [self.navigationController pushViewController:autolayoutView animated:YES];
+    }
+    else if(row == 16){
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        showPGQContextMenuViewController *autolayoutView = [storyBoard instantiateViewControllerWithIdentifier:@"showPGQ"];
+        [self.navigationController pushViewController:autolayoutView animated:YES];
+    }else if (row == 17){
+    
+        [self.navigationController pushViewController:[[SelectedPhotoViewController alloc] init] animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
