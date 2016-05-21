@@ -22,7 +22,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    ProgressView * progressView  = [[ProgressView alloc] initWithFrame:CGRectMake(100, 70, 100, 8) Num:0.65];
+    ProgressView * progressView = [[ProgressView alloc] initWithFrame:CGRectMake(100, 70, 100, 8) Num:0.65];
     
     [self.view addSubview:progressView];
     [Statics reputationButtonWidthAnimation:progressView.progressBtn withProgress:0.65];

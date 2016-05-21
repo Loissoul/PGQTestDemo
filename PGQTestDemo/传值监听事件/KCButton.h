@@ -27,3 +27,18 @@ typedef void (^KCButtonClick)(KCButton *);
 -(void) click;
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

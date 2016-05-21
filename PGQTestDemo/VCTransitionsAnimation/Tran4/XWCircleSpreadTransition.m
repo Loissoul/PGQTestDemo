@@ -40,9 +40,13 @@
 
 - (void)dismissAnimation:(id<UIViewControllerContextTransitioning>)transitionContext{
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UINavigationController *toVC = (UINavigationController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    Tran4ViewController *temp = toVC.viewControllers.lastObject;
+    
+    UITabBarController *toVC = (UITabBarController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UINavigationController *navVC = toVC.viewControllers.firstObject;
+
+    Tran4ViewController *temp = navVC.viewControllers.lastObject;
     UIView *containerView = [transitionContext containerView];
+    
     //画两个圆路径
     CGFloat radius = sqrtf(containerView.frame.size.height * containerView.frame.size.height + containerView.frame.size.width * containerView.frame.size.width) / 2;
     UIBezierPath *startCycle = [UIBezierPath bezierPathWithArcCenter:containerView.center radius:radius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
@@ -52,6 +56,8 @@
     maskLayer.fillColor = [UIColor greenColor].CGColor;
     maskLayer.path = endCycle.CGPath;
     fromVC.view.layer.mask = maskLayer;
+    
+    
     //创建路径动画
     CABasicAnimation *maskLayerAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
     maskLayerAnimation.delegate = self;
@@ -66,15 +72,14 @@
 
 - (void)presentAnimation:(id<UIViewControllerContextTransitioning>)transitionContext{
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    
-    
     UITabBarController *fromVC = (UITabBarController *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UINavigationController *navVC = fromVC.viewControllers.firstObject;
     
     Tran4ViewController *temp = navVC.viewControllers.lastObject;
     UIView *containerView = [transitionContext containerView];
     [containerView addSubview:toVC.view];
-    //画两个圆路径
+    
+    //画两个圆路径(先是根据小button的layer画出初始状态)
     UIBezierPath *startCycle =  [UIBezierPath bezierPathWithOvalInRect:temp.buttonFrame];
     CGFloat x = MAX(temp.buttonFrame.origin.x, containerView.frame.size.width - temp.buttonFrame.origin.x);
     CGFloat y = MAX(temp.buttonFrame.origin.y, containerView.frame.size.height - temp.buttonFrame.origin.y);
@@ -85,14 +90,15 @@
     maskLayer.path = endCycle.CGPath;
     //将maskLayer作为toVC.View的遮盖
     toVC.view.layer.mask = maskLayer;
+    
     //创建路径动画
     CABasicAnimation *maskLayerAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
-    maskLayerAnimation.delegate = self;
+    maskLayerAnimation.delegate  = self;
     //动画是加到layer上的，所以必须为CGPath，再将CGPath桥接为OC对象
     maskLayerAnimation.fromValue = (__bridge id)(startCycle.CGPath);
-    maskLayerAnimation.toValue = (__bridge id)((endCycle.CGPath));
-    maskLayerAnimation.duration = [self transitionDuration:transitionContext];
-    maskLayerAnimation.delegate = self;
+    maskLayerAnimation.toValue   = (__bridge id)((endCycle.CGPath));
+    maskLayerAnimation.duration  = [self transitionDuration:transitionContext];
+    maskLayerAnimation.delegate  = self;
     maskLayerAnimation.timingFunction = [CAMediaTimingFunction  functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
     [maskLayerAnimation setValue:transitionContext forKey:@"transitionContext"];

@@ -26,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     //官方版高度没有64,所以加个高度56仿冒NavBar的View
     UIView *navBarBackgroundView = ({
         UIView *view =  [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 56.f)];

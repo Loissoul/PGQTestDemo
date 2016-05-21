@@ -30,6 +30,8 @@
     UITableViewCell *cell=[self tableViewZ:self.myTableView cellForRowAtIndexPath:indexPath];
     return cell;
 }
+
+
 - (UITableViewCell *)tableViewZ:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell=[[UITableViewCell alloc]init];
     return cell;
@@ -37,7 +39,6 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    
     NSLog(@"offset---scroll:%f",self.myTableView.contentOffset.y);
     UIColor *color=[UIColor greenColor];
     CGFloat offset=scrollView.contentOffset.y;
@@ -60,7 +61,6 @@
 {
     CATransform3D t = CATransform3DIdentity;
     t.m34 = -1/2000;
-    
 }
 
 //- (CALayer *)greenHeadMaskLayer

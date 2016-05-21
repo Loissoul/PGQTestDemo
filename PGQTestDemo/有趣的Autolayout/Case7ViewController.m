@@ -15,8 +15,8 @@ static NSString *CellIdentifier = @"Cell";
 @interface Case7ViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) UIImageView *parallaxHeaderView;
-@property (strong, nonatomic) MASConstraint *parallaxHeaderHeightConstraint;
+@property (strong, nonatomic) UIImageView   * parallaxHeaderView;
+@property (strong, nonatomic) MASConstraint * parallaxHeaderHeightConstraint;
 @end
 
 @implementation Case7ViewController

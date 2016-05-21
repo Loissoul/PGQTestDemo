@@ -57,7 +57,8 @@
     //对tempView做动画，避免bug;
     UIView *tempView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
     tempView.frame = fromVC.view.frame;
-    UIView *containerView = [transitionContext containerView];
+    UIView *containerView =[transitionContext containerView];
+    
     [containerView addSubview:toVC.view];
     [containerView addSubview:tempView];
     fromVC.view.hidden = YES;
@@ -66,33 +67,40 @@
     CATransform3D transfrom3d = CATransform3DIdentity;
     transfrom3d.m34 = -0.002;
     containerView.layer.sublayerTransform = transfrom3d;
-    //增加阴影
-    CAGradientLayer *fromGradient = [CAGradientLayer layer];
-    fromGradient.frame = fromVC.view.bounds;
-    fromGradient.colors = @[(id)[UIColor blackColor].CGColor,
-                        (id)[UIColor blackColor].CGColor];
-    fromGradient.startPoint = CGPointMake(0.0, 0.5);
-    fromGradient.endPoint = CGPointMake(0.8, 0.5);
-    UIView *fromShadow = [[UIView alloc]initWithFrame:fromVC.view.bounds];
-    fromShadow.backgroundColor = [UIColor clearColor];
-    [fromShadow.layer insertSublayer:fromGradient atIndex:1];
-    fromShadow.alpha = 0.0;
-    [tempView addSubview:fromShadow];
-    CAGradientLayer *toGradient = [CAGradientLayer layer];
-    toGradient.frame = fromVC.view.bounds;
-    toGradient.colors = @[(id)[UIColor blackColor].CGColor,
-                            (id)[UIColor blackColor].CGColor];
-    toGradient.startPoint = CGPointMake(0.0, 0.5);
-    toGradient.endPoint = CGPointMake(0.8, 0.5);
-    UIView *toShadow = [[UIView alloc]initWithFrame:fromVC.view.bounds];
-    toShadow.backgroundColor = [UIColor clearColor];
-    [toShadow.layer insertSublayer:toGradient atIndex:1];
-    toShadow.alpha = 1.0;
-    [toVC.view addSubview:toShadow];
+    
+    //释放代码 添加阴影  使转场的效果更好
+    
+//    //增加阴影
+//    CAGradientLayer *fromGradient = [CAGradientLayer layer];
+//    fromGradient.frame = fromVC.view.bounds;
+//    fromGradient.colors = @[(id)[UIColor blackColor].CGColor,
+//                        (id)[UIColor blackColor].CGColor];
+//    fromGradient.startPoint = CGPointMake(0.0, 0.5);
+//    fromGradient.endPoint = CGPointMake(0.8, 0.5);
+//    
+//    UIView *fromShadow = [[UIView alloc]initWithFrame:fromVC.view.bounds];
+//    fromShadow.backgroundColor = [UIColor clearColor];
+//    [fromShadow.layer insertSublayer:fromGradient atIndex:1];
+//    fromShadow.alpha = 0.0;
+//    [tempView addSubview:fromShadow];
+//    
+//    CAGradientLayer *toGradient = [CAGradientLayer layer];
+//    toGradient.frame = fromVC.view.bounds;
+//    toGradient.colors = @[(id)[UIColor blackColor].CGColor,
+//                            (id)[UIColor blackColor].CGColor];
+//    toGradient.startPoint = CGPointMake(0.0, 0.5);
+//    toGradient.endPoint = CGPointMake(0.8, 0.5);
+//    
+//    UIView *toShadow = [[UIView alloc]initWithFrame:fromVC.view.bounds];
+//    toShadow.backgroundColor = [UIColor clearColor];
+//    [toShadow.layer insertSublayer:toGradient atIndex:1];
+//    toShadow.alpha = 1.0;
+//    [toVC.view addSubview:toShadow];
+    
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         tempView.layer.transform = CATransform3DMakeRotation(-M_PI_2, 0, 1, 0);
-        fromShadow.alpha = 1.0;
-        toShadow.alpha = 0.0;
+//        fromShadow.alpha = 1.0;
+//        toShadow.alpha = 0.0;
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         if ([transitionContext transitionWasCancelled]) {
@@ -113,8 +121,8 @@
     [containerView addSubview:toVC.view];
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         tempView.layer.transform = CATransform3DIdentity;
+        tempView.subviews.lastObject.alpha = 1.0; //上面 阴影添加的话 这边的alpha 应该设置为0
         fromVC.view.subviews.lastObject.alpha = 1.0;
-        tempView.subviews.lastObject.alpha = 0.0;
     } completion:^(BOOL finished) {
         if ([transitionContext transitionWasCancelled]) {
             [transitionContext completeTransition:NO];
@@ -124,7 +132,6 @@
             toVC.view.hidden = NO;
         }
     }];
-    
 }
 
 @end

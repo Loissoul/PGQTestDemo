@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) HGAnimationIndicator * hganimation;
 @property (nonatomic, strong) UIView * backWindowView;
-
+@property (nonatomic, strong) UILabel * label;
 @end
 
 @implementation Statics
@@ -382,4 +382,78 @@ static Statics * statics = nil;
      */
     return html;
 }
+
+- (void)pgq_RACSignal
+{
+
+    RACSignal * signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"a"];
+            [subscriber sendCompleted];
+        });
+        return nil;
+    }];
+    
+    RACSignal * signalB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"b"];
+            [subscriber sendCompleted];
+        });
+        return nil;
+    }];
+    RACSignal * signalC = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"b"];
+            [subscriber sendCompleted];
+        });
+        return nil;
+    }];
+    RACSignal * signalD = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"b"];
+            [subscriber sendCompleted];
+        });
+        return nil;
+    }];
+
+//    [[signalA combineLatestWith:signalB] sub]
+    
+    //一个完成之后 另一个完成
+    [[signalA concat:signalB]subscribeNext:^(id x) {
+
+    }];
+    //两个完成过后
+    [[signalA zipWith:signalB] subscribeNext:^(id x) {
+        
+    }];
+    //所有完成过后
+    [[RACSignal combineLatest:@[signalA, signalB]] subscribeNext:^(id x) {
+
+    }];
+}
+
+- (void)Timer_RAC
+{
+    RAC(_label, text) = [[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] map:^NSString*(NSData * date) {
+        return date.description;
+        
+    }];
+}
+
+- (void)Rac_Macro
+{
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    RAC(button, backgroundColor) = [RACObserve(button, selected)map:^UIColor* (NSNumber * selected) {
+        return [selected boolValue]?[UIColor redColor]:[UIColor greenColor];
+    }];
+}
+
+- (UILabel *)label
+{
+    if (!_label) {
+        _label = [UILabel new];
+    }
+    return _label;
+}
+
 @end

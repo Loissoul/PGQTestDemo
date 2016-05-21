@@ -19,8 +19,6 @@
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.automaticallyAdjustsScrollViewInsets = NO;
-
-    SXLog(@"heheda");
     
     _dataArr = @[@"强神",@"强神",@"强神",@"强神",@"强神",@"强神",@"强神",@"强神",@"强神",@"强神 "];
     

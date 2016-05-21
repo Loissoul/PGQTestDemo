@@ -17,8 +17,6 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        
-        
     }
     return self;
 }
@@ -28,7 +26,7 @@
     [self getIvars];
 }
 
-+(void)getIvars
++ (void)getIvars
 {
     unsigned int count = 0;
     Ivar *ivars = class_copyIvarList([UITextField class], &count);

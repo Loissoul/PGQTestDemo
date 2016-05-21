@@ -77,7 +77,6 @@ PGQContentMenuTableViewDelegate
 }
 
 #pragma mark - IBAction
-
 - (void)addFriendClick{
     // init YALContextMenuTableView tableView
     if (!self.contextMenuTableView) {
@@ -116,14 +115,13 @@ PGQContentMenuTableViewDelegate
 }
 
 #pragma mark - YALContextMenuTableViewDelegate
-
 - (void)contextMenuTableView:(PGQContentMenuTableView *)contextMenuTableView didDismissWithIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Menu dismissed with indexpath = %@", indexPath);
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate
 
-- (void)tableView:(PGQContentMenuTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(PGQContentMenuTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView dismisWithIndexPath:indexPath];
     

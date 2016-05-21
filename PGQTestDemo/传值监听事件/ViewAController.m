@@ -111,7 +111,6 @@
     }
 }
 
-
 - (void)dealloc
 {
     [_stockForKVO removeObserver:self forKeyPath:@"price"];

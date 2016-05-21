@@ -138,7 +138,6 @@ typedef NS_ENUM(NSUInteger, AnimatingState) {
 - (void)updateAlongsideRotation {
     if (self.animatingState == Hiding) {
         if ([self.pgqDelegate respondsToSelector:@selector(contentMenuTableView:didDismissWithIndePath:)]) {
-            //            [self.pgqDelegate contextMenuTableView:self didDismissWithIndexPath:[self indexPathForCell:self.selectedCell]];
             [self.pgqDelegate contentMenuTableView:self didDismissWithIndePath:[self indexPathForCell:self.selectedCell]];
         }
         [self removeFromSuperview];
@@ -149,7 +148,6 @@ typedef NS_ENUM(NSUInteger, AnimatingState) {
 }
 
 #pragma mark - Private
-
 - (void)show:(BOOL)show visibleCellsAnimated:(BOOL)animated {
     NSArray *visibleCells = [self visibleCells];
     
@@ -220,7 +218,6 @@ typedef NS_ENUM(NSUInteger, AnimatingState) {
 }
 
 #pragma mark - Animate Cells
-
 - (void)prepareCellForShowAnimation:(UITableViewCell<PGQContentMenuCell> *)cell {
     
     [self resetAnimatedIconForCell:cell];
@@ -310,7 +307,6 @@ typedef NS_ENUM(NSUInteger, AnimatingState) {
 }
 
 #pragma mark - Overriden
-
 - (id)dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell<PGQContentMenuCell> *cell = [super dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
@@ -320,8 +316,7 @@ typedef NS_ENUM(NSUInteger, AnimatingState) {
     if (cell) {
         if (self.animatingState==Showing) {
             [cell contentView].hidden = YES;
-        }else if (self.animatingState==Stable)
-        {
+        }else if (self.animatingState==Stable){
             [cell contentView].hidden = NO;
             [cell animatedContent].alpha = 1;
         }
@@ -338,6 +333,7 @@ typedef NS_ENUM(NSUInteger, AnimatingState) {
 }
 
 - (void)setAnchorPoint:(CGPoint)anchorPoint forView:(UIView *)view {
+    
     CGPoint newPoint = CGPointMake(view.bounds.size.width * anchorPoint.x,
                                    view.bounds.size.height * anchorPoint.y);
     CGPoint oldPoint = CGPointMake(view.bounds.size.width * view.layer.anchorPoint.x,

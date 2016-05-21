@@ -7,12 +7,13 @@
 //
 
 #import "CustomUIViewController.h"
-
 #import "HGAnimationIndicator.h"
-
 #import "CustomUItextField.h"
-
 #import "CustomAnimationViewController.h"
+
+@interface CustomUIViewController ()
+@property (nonatomic, strong) NSTimer * timer;
+@end
 
 @implementation CustomUIViewController
 
@@ -22,6 +23,11 @@
 
     self.title = @"Custom UI";
     [self initButton];
+}
+
+-(void)action
+{
+    NSLog(@"一些实验");
 }
 
 - (void) initButton

@@ -32,8 +32,8 @@
 {
     [super viewDidLoad];
     
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-        self.automaticallyAdjustsScrollViewInsets = NO;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     UIImageView * showImageview = ({
     
@@ -44,11 +44,6 @@
         imageView.frame = CGRectMake(10, 0, 100, 100);
         
         [self.view addSubview:imageView];
-
-//        [imageview mas_makeConstraints:^(MASConstraintMaker *make) {
-////            make.
-//            
-//        }];
         
         imageView;
     });
@@ -141,7 +136,6 @@
     UIGravityBehavior * gravityBehavior = [[UIGravityBehavior alloc]initWithItems:@[self.imageview]];
     [self.animator addBehavior:attachBeahavior];
     [self.animator addBehavior:gravityBehavior];
-    
 }
 
 

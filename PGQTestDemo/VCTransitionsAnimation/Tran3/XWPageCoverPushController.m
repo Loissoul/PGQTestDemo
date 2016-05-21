@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"翻页效果";
+    self.title = @"翻页效果2";
     self.view.backgroundColor = [UIColor grayColor];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pic1.png"]];
     [self.view addSubview:imageView];

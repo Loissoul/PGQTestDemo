@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B461AA71C841B3F00FC0BD1 /* Video.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B461AA61C841B3F00FC0BD1 /* Video.plist */; };
+		3B461AAF1C841C0900FC0BD1 /* BridgeLoop-640p.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B461AAA1C841C0900FC0BD1 /* BridgeLoop-640p.mp4 */; };
+		3B461AB01C841C0900FC0BD1 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B461AAE1C841C0900FC0BD1 /* VideoViewController.m */; };
+		3B461AB31C841C5B00FC0BD1 /* PGQVideoFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B461AB21C841C5B00FC0BD1 /* PGQVideoFunctions.m */; };
+		3B461AB61C841E9C00FC0BD1 /* PGQVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B461AB51C841E9C00FC0BD1 /* PGQVideoViewController.m */; };
+		3B57C9F71CACF1490042AA20 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B57C9F41CACF1490042AA20 /* UIImage+Image.m */; };
+		3B57C9F81CACF1490042AA20 /* UIImageView+HeaderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B57C9F61CACF1490042AA20 /* UIImageView+HeaderImageView.m */; };
+		3B66B0981C9D3DA7005471D5 /* PullImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B66B0971C9D3DA7005471D5 /* PullImageViewController.m */; };
+		3B7AF1E21C86E1E300689F21 /* StretchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7AF1E11C86E1E300689F21 /* StretchView.m */; };
 		3CE5D3C358872D7746FE4761 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2F113E48DA174E8C8B07D8 /* Pods.framework */; };
 		A718C8FF1C4E52510026AB09 /* ProgressBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = A718C8FE1C4E52510026AB09 /* ProgressBtn.m */; };
 		A718C9021C4E5B350026AB09 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A718C9011C4E5B350026AB09 /* ProgressView.m */; };
@@ -56,6 +65,10 @@
 		A779943A1C42449D009B8050 /* HGAnimationIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A77994331C42449D009B8050 /* HGAnimationIndicator.m */; };
 		A784BDCB1C059AD600074119 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A784BDCA1C059AD600074119 /* ImageViewController.m */; };
 		A784BDD01C05AE7700074119 /* CalayerCAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A784BDCF1C05AE7700074119 /* CalayerCAViewController.m */; };
+		A78C8C421C746C0400A3925A /* Gaspar-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A78C8C3E1C746C0400A3925A /* Gaspar-Regular.otf */; };
+		A78C8C431C746C0400A3925A /* MFJinHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A78C8C3F1C746C0400A3925A /* MFJinHei_Noncommercial-Regular.ttf */; };
+		A78C8C441C746C0400A3925A /* MFTongXin_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A78C8C401C746C0400A3925A /* MFTongXin_Noncommercial-Regular.ttf */; };
+		A78C8C451C746C0400A3925A /* MFZhiHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A78C8C411C746C0400A3925A /* MFZhiHei_Noncommercial-Regular.ttf */; };
 		A7977B431C0ECCDF00FFE6AE /* FanView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7977B421C0ECCDF00FFE6AE /* FanView.m */; };
 		A7977B471C0ED56500FFE6AE /* FanAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7977B461C0ED56500FFE6AE /* FanAnimationView.m */; };
 		A7977B491C0ED5F900FFE6AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7977B481C0ED5F900FFE6AE /* CoreGraphics.framework */; };
@@ -70,6 +83,7 @@
 		A798D03C1BF1D08000927323 /* PGQTestDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A798D03A1BF1D08000927323 /* PGQTestDemo.xcdatamodeld */; };
 		A798D03E1BF1D08000927323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A798D03D1BF1D08000927323 /* Assets.xcassets */; };
 		A798D0411BF1D08000927323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A798D03F1BF1D08000927323 /* LaunchScreen.storyboard */; };
+		A7A11D021C76AEBE001FC7A4 /* AFNetUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A11D011C76AEBE001FC7A4 /* AFNetUtils.m */; };
 		A7A122381C4790AD00B22D24 /* LeftImageTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A122371C4790AD00B22D24 /* LeftImageTextField.m */; };
 		A7A1223D1C4790D700B22D24 /* CustomUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1223C1C4790D700B22D24 /* CustomUIViewController.m */; };
 		A7A122401C47932600B22D24 /* Statics.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A1223F1C47932600B22D24 /* Statics.m */; };
@@ -136,6 +150,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B461AA61C841B3F00FC0BD1 /* Video.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Video.plist; sourceTree = "<group>"; };
+		3B461AAA1C841C0900FC0BD1 /* BridgeLoop-640p.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BridgeLoop-640p.mp4"; sourceTree = "<group>"; };
+		3B461AAD1C841C0900FC0BD1 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		3B461AAE1C841C0900FC0BD1 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		3B461AB11C841C5B00FC0BD1 /* PGQVideoFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGQVideoFunctions.h; sourceTree = "<group>"; };
+		3B461AB21C841C5B00FC0BD1 /* PGQVideoFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGQVideoFunctions.m; sourceTree = "<group>"; };
+		3B461AB41C841E9C00FC0BD1 /* PGQVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGQVideoViewController.h; sourceTree = "<group>"; };
+		3B461AB51C841E9C00FC0BD1 /* PGQVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGQVideoViewController.m; sourceTree = "<group>"; };
+		3B57C9F31CACF1490042AA20 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		3B57C9F41CACF1490042AA20 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		3B57C9F51CACF1490042AA20 /* UIImageView+HeaderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HeaderImageView.h"; sourceTree = "<group>"; };
+		3B57C9F61CACF1490042AA20 /* UIImageView+HeaderImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HeaderImageView.m"; sourceTree = "<group>"; };
+		3B66B0961C9D3DA7005471D5 /* PullImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullImageViewController.h; sourceTree = "<group>"; };
+		3B66B0971C9D3DA7005471D5 /* PullImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullImageViewController.m; sourceTree = "<group>"; };
+		3B7AF1E01C86E1E300689F21 /* StretchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StretchView.h; sourceTree = "<group>"; };
+		3B7AF1E11C86E1E300689F21 /* StretchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StretchView.m; sourceTree = "<group>"; };
 		6F2F113E48DA174E8C8B07D8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FBF5189C8858C81C7575139 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A718C8FD1C4E52510026AB09 /* ProgressBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressBtn.h; sourceTree = "<group>"; };
@@ -224,6 +254,10 @@
 		A784BDCA1C059AD600074119 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		A784BDCE1C05AE7700074119 /* CalayerCAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalayerCAViewController.h; sourceTree = "<group>"; };
 		A784BDCF1C05AE7700074119 /* CalayerCAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalayerCAViewController.m; sourceTree = "<group>"; };
+		A78C8C3E1C746C0400A3925A /* Gaspar-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaspar-Regular.otf"; sourceTree = "<group>"; };
+		A78C8C3F1C746C0400A3925A /* MFJinHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFJinHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		A78C8C401C746C0400A3925A /* MFTongXin_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFTongXin_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		A78C8C411C746C0400A3925A /* MFZhiHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFZhiHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
 		A7977B411C0ECCDF00FFE6AE /* FanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FanView.h; sourceTree = "<group>"; };
 		A7977B421C0ECCDF00FFE6AE /* FanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FanView.m; sourceTree = "<group>"; };
 		A7977B451C0ED56500FFE6AE /* FanAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FanAnimationView.h; sourceTree = "<group>"; };
@@ -246,6 +280,8 @@
 		A798D0421BF1D08000927323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A798D0471BF1D08000927323 /* PGQTestDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGQTestDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A798D0521BF1D08000927323 /* PGQTestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGQTestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A11D001C76AEBE001FC7A4 /* AFNetUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetUtils.h; sourceTree = "<group>"; };
+		A7A11D011C76AEBE001FC7A4 /* AFNetUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetUtils.m; sourceTree = "<group>"; };
 		A7A122361C4790AD00B22D24 /* LeftImageTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftImageTextField.h; sourceTree = "<group>"; };
 		A7A122371C4790AD00B22D24 /* LeftImageTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftImageTextField.m; sourceTree = "<group>"; };
 		A7A1223B1C4790D700B22D24 /* CustomUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUIViewController.h; sourceTree = "<group>"; };
@@ -373,6 +409,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B461AA01C841AC900FC0BD1 /* 视频 */ = {
+			isa = PBXGroup;
+			children = (
+				3B461AA81C841C0900FC0BD1 /* Model */,
+				3B461AA91C841C0900FC0BD1 /* Resources */,
+				3B461AAB1C841C0900FC0BD1 /* View */,
+				3B461AAC1C841C0900FC0BD1 /* ViewController */,
+				3B461AA61C841B3F00FC0BD1 /* Video.plist */,
+			);
+			path = "视频";
+			sourceTree = "<group>";
+		};
+		3B461AA81C841C0900FC0BD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B461AB11C841C5B00FC0BD1 /* PGQVideoFunctions.h */,
+				3B461AB21C841C5B00FC0BD1 /* PGQVideoFunctions.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B461AA91C841C0900FC0BD1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3B461AAA1C841C0900FC0BD1 /* BridgeLoop-640p.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3B461AAB1C841C0900FC0BD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B461AAC1C841C0900FC0BD1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B461AAD1C841C0900FC0BD1 /* VideoViewController.h */,
+				3B461AAE1C841C0900FC0BD1 /* VideoViewController.m */,
+				3B461AB41C841E9C00FC0BD1 /* PGQVideoViewController.h */,
+				3B461AB51C841E9C00FC0BD1 /* PGQVideoViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3B57C9F21CACF1490042AA20 /* Categroty */ = {
+			isa = PBXGroup;
+			children = (
+				3B57C9F31CACF1490042AA20 /* UIImage+Image.h */,
+				3B57C9F41CACF1490042AA20 /* UIImage+Image.m */,
+				3B57C9F51CACF1490042AA20 /* UIImageView+HeaderImageView.h */,
+				3B57C9F61CACF1490042AA20 /* UIImageView+HeaderImageView.m */,
+			);
+			path = Categroty;
+			sourceTree = "<group>";
+		};
+		3B66B0951C9D3D8A005471D5 /* 图片下拉 */ = {
+			isa = PBXGroup;
+			children = (
+				3B66B0961C9D3DA7005471D5 /* PullImageViewController.h */,
+				3B66B0971C9D3DA7005471D5 /* PullImageViewController.m */,
+			);
+			path = "图片下拉";
+			sourceTree = "<group>";
+		};
 		A718C9121C4F26960026AB09 /* 相册裁剪 */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +736,8 @@
 		A798D02D1BF1D08000927323 /* PGQTestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3B66B0951C9D3D8A005471D5 /* 图片下拉 */,
+				3B461AA01C841AC900FC0BD1 /* 视频 */,
 				A718C9121C4F26960026AB09 /* 相册裁剪 */,
 				A7C510E01C22639300AE70C6 /* 有趣的Autolayout */,
 				A7BD0B7A1C1AAAD8008E741F /* 左视图的框架思想 */,
@@ -660,6 +765,10 @@
 		A798D02E1BF1D08000927323 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A78C8C3E1C746C0400A3925A /* Gaspar-Regular.otf */,
+				A78C8C3F1C746C0400A3925A /* MFJinHei_Noncommercial-Regular.ttf */,
+				A78C8C401C746C0400A3925A /* MFTongXin_Noncommercial-Regular.ttf */,
+				A78C8C411C746C0400A3925A /* MFZhiHei_Noncommercial-Regular.ttf */,
 				A798D02F1BF1D08000927323 /* main.m */,
 				A7AEBDF01C02DFEE003C341B /* PrefixHeader.pch */,
 			);
@@ -688,6 +797,8 @@
 				A718C8FE1C4E52510026AB09 /* ProgressBtn.m */,
 				A718C9001C4E5B350026AB09 /* ProgressView.h */,
 				A718C9011C4E5B350026AB09 /* ProgressView.m */,
+				3B7AF1E01C86E1E300689F21 /* StretchView.h */,
+				3B7AF1E11C86E1E300689F21 /* StretchView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -708,6 +819,7 @@
 		A7AEBDED1C02DBD5003C341B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3B57C9F21CACF1490042AA20 /* Categroty */,
 				A76BFBAB1C4A32030082B313 /* UIView+anchorPoint.h */,
 				A76BFBAC1C4A32030082B313 /* UIView+anchorPoint.m */,
 				A76BFB8F1C49E4190082B313 /* UIView+ FrameChange.m */,
@@ -716,6 +828,8 @@
 				A7A1223F1C47932600B22D24 /* Statics.m */,
 				A7AEBDEE1C02DBD5003C341B /* SXEasyConstant.h */,
 				A7AEBDEF1C02DBD5003C341B /* SXEasyMacro.h */,
+				A7A11D001C76AEBE001FC7A4 /* AFNetUtils.h */,
+				A7A11D011C76AEBE001FC7A4 /* AFNetUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1002,18 +1116,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				A76BFB9D1C4A20A40082B313 /* XWMagicMoveCell.xib in Resources */,
+				3B461AA71C841B3F00FC0BD1 /* Video.plist in Resources */,
 				A77994351C42449D009B8050 /* 2.png in Resources */,
 				A7977B511C0ED63100FFE6AE /* job_radar@3x.png in Resources */,
 				A76763D61C1671D20065A895 /* avator.png in Resources */,
 				A77994371C42449D009B8050 /* 4.png in Resources */,
 				A77994361C42449D009B8050 /* 3.png in Resources */,
+				A78C8C421C746C0400A3925A /* Gaspar-Regular.otf in Resources */,
 				A7977B501C0ED63100FFE6AE /* job_radar@2x.png in Resources */,
 				A798D0411BF1D08000927323 /* LaunchScreen.storyboard in Resources */,
 				A7C51C601C240B9E00AE70C6 /* ContextMenuCell.xib in Resources */,
+				A78C8C441C746C0400A3925A /* MFTongXin_Noncommercial-Regular.ttf in Resources */,
+				A78C8C431C746C0400A3925A /* MFJinHei_Noncommercial-Regular.ttf in Resources */,
 				A798D03E1BF1D08000927323 /* Assets.xcassets in Resources */,
 				A77994391C42449D009B8050 /* 6.png in Resources */,
 				A7C511041C22639300AE70C6 /* Main1.storyboard in Resources */,
+				3B461AAF1C841C0900FC0BD1 /* BridgeLoop-640p.mp4 in Resources */,
 				A7AEEAB51C46279D009DE866 /* Animation.storyboard in Resources */,
+				A78C8C451C746C0400A3925A /* MFZhiHei_Noncommercial-Regular.ttf in Resources */,
 				A798D0391BF1D08000927323 /* Main.storyboard in Resources */,
 				A77994381C42449D009B8050 /* 5.png in Resources */,
 				A7AEBDF91C02E5FC003C341B /* CellOfHeight.xib in Resources */,
@@ -1121,6 +1241,7 @@
 				A7AEBDF81C02E5FC003C341B /* CellOfHeight.m in Sources */,
 				A7C199301C19113A001E8926 /* PGQViewController.m in Sources */,
 				A718C91B1C4F294D0026AB09 /* SelectedPhotoViewController.m in Sources */,
+				A7A11D021C76AEBE001FC7A4 /* AFNetUtils.m in Sources */,
 				A7EF50681C0184C700D56821 /* GCDViewController.m in Sources */,
 				A7C511101C22639300AE70C6 /* Case8DataEntity.m in Sources */,
 				A76BFBB61C4A32ED0082B313 /* XWCircleSpreadTransition.m in Sources */,
@@ -1135,21 +1256,27 @@
 				A76BFB791C48F1260082B313 /* Tran1ViewController.m in Sources */,
 				A7EF506A1C0184C700D56821 /* ViewBController.m in Sources */,
 				A7C5110E1C22639300AE70C6 /* Case7ViewController.m in Sources */,
+				3B461AB01C841C0900FC0BD1 /* VideoViewController.m in Sources */,
 				A7C5110C1C22639300AE70C6 /* Case6ItemView.m in Sources */,
 				A7C511091C22639300AE70C6 /* Case4DataEntity.m in Sources */,
 				A76BFB851C490F4A0082B313 /* TranVC.m in Sources */,
 				A7C5110A1C22639300AE70C6 /* Case4ViewController.m in Sources */,
+				3B461AB61C841E9C00FC0BD1 /* PGQVideoViewController.m in Sources */,
 				A798D0331BF1D08000927323 /* AppDelegate.m in Sources */,
 				A7AFB9A71C48D82F002813B1 /* CustomUItextField.m in Sources */,
 				A7977B471C0ED56500FFE6AE /* FanAnimationView.m in Sources */,
+				3B66B0981C9D3DA7005471D5 /* PullImageViewController.m in Sources */,
 				A718C9181C4F27370026AB09 /* CrapPhotoViewController.m in Sources */,
 				A7AFB9A11C48933E002813B1 /* UITextField+PlaceholderColor.m in Sources */,
 				A718C8FF1C4E52510026AB09 /* ProgressBtn.m in Sources */,
 				A7C5110D1C22639300AE70C6 /* Case6ViewController.m in Sources */,
+				3B461AB31C841C5B00FC0BD1 /* PGQVideoFunctions.m in Sources */,
 				A7C51B331C24053300AE70C6 /* PGQContentMenuTableView.m in Sources */,
 				A7C1992D1C1910F8001E8926 /* YZDisplayViewController.m in Sources */,
+				3B7AF1E21C86E1E300689F21 /* StretchView.m in Sources */,
 				A76BFBA01C4A20A40082B313 /* XWNaviTransition.m in Sources */,
 				A7BD0B801C1AAE03008E741F /* Main1ViewController.m in Sources */,
+				3B57C9F71CACF1490042AA20 /* UIImage+Image.m in Sources */,
 				A7C5110B1C22639300AE70C6 /* Case5ViewController.m in Sources */,
 				A76BFB8D1C49E3670082B313 /* Tran2ViewController.m in Sources */,
 				A7C511051C22639300AE70C6 /* Case1ViewController.m in Sources */,
@@ -1161,6 +1288,7 @@
 				A7A1223D1C4790D700B22D24 /* CustomUIViewController.m in Sources */,
 				A798D0301BF1D08000927323 /* main.m in Sources */,
 				A7C51C631C250DC600AE70C6 /* TransparentLabel.m in Sources */,
+				3B57C9F81CACF1490042AA20 /* UIImageView+HeaderImageView.m in Sources */,
 				A753F7A81C2BDCB400379883 /* YALNavigationBar.m in Sources */,
 				A7BD0B831C1AAE32008E741F /* LeftViewController.m in Sources */,
 				A7C511061C22639300AE70C6 /* Case2ViewController.m in Sources */,

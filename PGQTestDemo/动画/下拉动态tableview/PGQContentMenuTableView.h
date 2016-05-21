@@ -45,7 +45,6 @@
  */
 - (instancetype) initWithTableViewDelegateDataSource:(id<UITableViewDelegate,UITableViewDataSource>)delegateDataSource;
 
-
 /**
  *  Use this method for correct presenration as [superview addSubview:MyPGQTableView] will not present side menu properly
  *
@@ -54,7 +53,6 @@
  *  @param animated  yes or no wather you want appearance animated or not
  */
 - (void)showInView:(UIView *)superView withEdgeInsets:(UIEdgeInsets)edgInsets animated:(BOOL)animated;
-
 
 /**
  *  Call this method to dismiss your menuAnimated
@@ -68,9 +66,5 @@
  *  call this menthod before or building the device totation animation
  */
 - (void)updateAlongsideRotation;
-
-
-
-
 
 @end

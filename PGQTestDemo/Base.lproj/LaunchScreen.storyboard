@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +14,51 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-screen-750x1334" translatesAutoresizingMaskIntoConstraints="NO" id="j05-ru-Mew">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j05-ru-Mew" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="9f2-p3-ovv"/>
+                            <constraint firstAttribute="trailing" secondItem="j05-ru-Mew" secondAttribute="trailing" id="GNH-cg-WWz"/>
+                            <constraint firstItem="j05-ru-Mew" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="bdg-pr-P12"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="j05-ru-Mew" secondAttribute="bottom" id="tHO-YL-eAf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="j05-ru-Mew"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9f2-p3-ovv"/>
+                                <exclude reference="GNH-cg-WWz"/>
+                                <exclude reference="bdg-pr-P12"/>
+                                <exclude reference="tHO-YL-eAf"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="j05-ru-Mew"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9f2-p3-ovv"/>
+                                <include reference="GNH-cg-WWz"/>
+                                <include reference="bdg-pr-P12"/>
+                                <include reference="tHO-YL-eAf"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-93" y="327"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash-screen-750x1334" width="750" height="1334"/>
+    </resources>
 </document>

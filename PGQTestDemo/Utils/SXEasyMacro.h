@@ -22,9 +22,9 @@
 
 /** 输出*/
 #ifdef DEBUG
-#define SXLog(...) NSLog(__VA_ARGS__)
+#define PGQLog(...) NSLog(__VA_ARGS__)
 #else
-#define SXLog(...)
+#define PGQLog(...)
 #endif
 
 #define SXPrint_CurrentMethod SXLog(@"%s",__FUNCTION__);
