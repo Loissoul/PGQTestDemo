@@ -38,6 +38,7 @@
     
     // 标题填充模式
     self.titleColorGradientStyle = YZTitleColorGradientStyleFill;
+    self.isShowUnderLine = YES;
 }
 
 
@@ -47,7 +48,7 @@
     
     // 段子
     ChildViewController *wordVc1 = [[ChildViewController alloc] init];
-    wordVc1.title = @"强哥";
+    wordVc1.title = @"强哥强哥";
     [self addChildViewController:wordVc1];
     
     // 段子

@@ -476,6 +476,37 @@
 			path = "图片下拉";
 			sourceTree = "<group>";
 		};
+		3B7339EA1D25164600EA5E9E /* 线程 */ = {
+			isa = PBXGroup;
+			children = (
+				3B7339EB1D25164600EA5E9E /* Model */,
+				3B7339EC1D25164600EA5E9E /* View */,
+				3B7339ED1D25164600EA5E9E /* ViewController */,
+			);
+			path = "线程";
+			sourceTree = "<group>";
+		};
+		3B7339EB1D25164600EA5E9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B7339EC1D25164600EA5E9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B7339ED1D25164600EA5E9E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		A718C9121C4F26960026AB09 /* 相册裁剪 */ = {
 			isa = PBXGroup;
 			children = (
@@ -736,6 +767,7 @@
 		A798D02D1BF1D08000927323 /* PGQTestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3B7339EA1D25164600EA5E9E /* 线程 */,
 				3B66B0951C9D3D8A005471D5 /* 图片下拉 */,
 				3B461AA01C841AC900FC0BD1 /* 视频 */,
 				A718C9121C4F26960026AB09 /* 相册裁剪 */,
@@ -1455,7 +1487,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PGQTestDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = PGQTestDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wordoor.PGQTestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1471,7 +1503,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PGQTestDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = PGQTestDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wordoor.PGQTestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
